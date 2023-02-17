@@ -1,19 +1,20 @@
-DROP TABLE IF EXISTS todo_item;
-DROP TABLE IF EXISTS todo_list;
 
-CREATE TABLE todo_list (
-    id serial PRIMARY KEY,
-    title varchar(150) NOT NULL
+drop table if exists todo_item;
+drop table if exists todo_list;
+
+create table todo_list (
+    id serial primary key,
+    title varchar(150)
 );
 
-CREATE TABLE todo_item (
-    id serial PRIMARY KEY,
-    title varchar(150) NOT NULL,
-    checked boolean NOT NULL DEFAULT false,
-    list_id integer NOT NULL,
-    FOREIGN KEY (list_id) REFERENCES todo_list(id)
+create table todo_item (
+    id serial primary key,
+    title varchar(150) not null,
+    checked boolean not null default false,
+    list_id integer not null,
+    foreign key (list_id) references todo_list(id)
 );
 
-INSERT INTO todo_list (title) VALUES ('List 1'), ('List 2');
-INSERT INTO todo_item (title, list_id)
-    VALUES ('Item 1', 1), ('Item 2', 2), ('Item 1', 2);
+insert into todo_list (title) values ('List 1'), ('List 2');
+insert into todo_item (title, list_id) 
+    values ('Connect to database', 1), ('Do queries', 1);

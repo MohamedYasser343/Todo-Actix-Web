@@ -24,8 +24,8 @@ git clone https://github.com/MohamedYasser343/Todo-Actix-Web.git
 
 ## Usage
 ```
-# Copy example .env file
-cp .env.example .env
+# Copy .env file
+cp env.env .env
 # Run postgres
 docker-compose up -d postgres
 # Install diesel
@@ -48,7 +48,7 @@ curl -s http://localhost:8080/
 # How To Run
 
 
-1. config your server and database information in **env.env**:
+1. config your server and database information in **.env**:
 
 2. use **Postman** or **curl** for using the project
 3. you can send:

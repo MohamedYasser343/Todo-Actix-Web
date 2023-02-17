@@ -40,7 +40,7 @@ cargo test --features "integration"
 cargo run 
 ```
 ```
-curl -s http://localhost:8080/
+curl -s http://<host>:<port>/todos
 ```
 
 ---
